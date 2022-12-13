@@ -1,3 +1,5 @@
+package packagePocAutom;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
