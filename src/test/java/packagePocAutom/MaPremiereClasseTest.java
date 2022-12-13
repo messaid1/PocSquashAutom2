@@ -6,7 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -16,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @SpringBootTest
-public class MaPremiereClasse {
+public class MaPremiereClasseTest {
     private WebDriver driver;
 
     @BeforeEach
@@ -40,9 +39,10 @@ public class MaPremiereClasse {
     public void tearDown() {
         driver.quit();
     }
-    @test
+
+    @Test
     @DisplayName("Test POC ouverture google.fr")
-    public void POCGoogle{
+    public void POCGoogle(){
         driver.get("http://www.google.fr");
         driver.manage().window().maximize();
     }
