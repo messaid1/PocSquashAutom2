@@ -41,7 +41,8 @@ public class MaPremiereClasse {
         driver.quit();
     }
     @test
-    @DisplayName("Test POC ouverture google.fr"){
+    @DisplayName("Test POC ouverture google.fr")
+    public void POCGoogle{
         driver.get("http://www.google.fr");
         driver.manage().window().maximize();
     }
