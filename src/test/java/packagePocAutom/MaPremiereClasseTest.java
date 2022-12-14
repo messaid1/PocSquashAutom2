@@ -43,29 +43,29 @@ public class MaPremiereClasseTest {
     @Test
     @DisplayName("Test POC ouverture google.fr")
     public void POCGoogle(){
-        LOOGGER.info("Ouverture de la page google.fr");
+        LOGGER.info("Ouverture de la page google.fr");
         driver.get("http://www.google.fr");
         driver.manage().window().maximize();
-        LOOGGER.info("Fin d'ouverture de google.fr");
+        LOGGER.info("Fin d'ouverture de google.fr");
     }
     @Test
     @DisplayName("POCAssertionFausse")
     public void POCAssertionFausse(){
         try {
-            LOOGGER.info("Essai d'assertion fausse");
+            LOGGER.info("Essai d'assertion fausse");
             Assertions.assertEquals(1,2);
         }
         catch (Exception e){
-            LOOGGER.info("Assertion fausse, message : " + e);
+            LOGGER.info("Assertion fausse, message : " + e);
         }
     }
     @Test
     @DisplayName("POCAssertionFausse")
     public void POCAssertionVraie() {
         try {
-            LOOGGER.info("Essai d'assertion vraie");
+            LOGGER.info("Essai d'assertion vraie");
             Assertions.assertEquals(1, 1);
-            LOOGGER.info("Assertion vraie, 1 = 1");
+            LOGGER.info("Assertion vraie, 1 = 1");
         } catch (Exception e) {
         }
     }
