@@ -10,11 +10,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 @SpringBootTest
 public class MaPremiereClasseTest {
     private WebDriver driver;
-
+    private static Logger LOOGGER;
     @BeforeEach
     public void setUp(){
         System.setProperty("webdriver.chrome.driver",   "/tmp/chromedriver");
@@ -40,17 +41,30 @@ public class MaPremiereClasseTest {
     @Test
     @DisplayName("Test POC ouverture google.fr")
     public void POCGoogle(){
+        LOOGGER.info("Ouverture de la page google.fr");
         driver.get("http://www.google.fr");
         driver.manage().window().maximize();
+        LOOGGER.info("Fin d'ouverture de google.fr");
     }
     @Test
     @DisplayName("POCAssertionFausse")
     public void POCAssertionFausse(){
-        Assertions.assertEquals(1,2);
+        try {
+            LOOGGER.info("Essai d'assertion fausse");
+            Assertions.assertEquals(1,2);
+        }
+        catch (Exception e){
+            LOOGGER.info("Assertion fausse, message : " + e);
+        }
     }
     @Test
     @DisplayName("POCAssertionFausse")
-    public void POCAssertionVraie(){
-        Assertions.assertEquals(1,1);
+    public void POCAssertionVraie() {
+        try {
+            LOOGGER.info("Essai d'assertion vraie");
+            Assertions.assertEquals(1, 1);
+            LOOGGER.info("Assertion vraie, 1 = 1");
+        } catch (Exception e) {
+        }
     }
 }
