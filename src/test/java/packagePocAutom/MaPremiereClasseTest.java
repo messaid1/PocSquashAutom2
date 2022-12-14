@@ -1,11 +1,8 @@
 package packagePocAutom;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.support.ui.Sleeper;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -45,5 +42,15 @@ public class MaPremiereClasseTest {
     public void POCGoogle(){
         driver.get("http://www.google.fr");
         driver.manage().window().maximize();
+    }
+    @Test
+    @DisplayName("POCAssertionFausse")
+    public void POCAssertionFausse(){
+        Assertions.assertEquals(1,2);
+    }
+    @Test
+    @DisplayName("POCAssertionFausse")
+    public void POCAssertionVraie(){
+        Assertions.assertEquals(1,1);
     }
 }
