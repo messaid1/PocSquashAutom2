@@ -2,6 +2,7 @@ package packagePocAutom;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.support.ui.Sleeper;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,12 +11,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @SpringBootTest
 public class MaPremiereClasseTest {
     private WebDriver driver;
-    private static Logger LOOGGER;
+    private static final Logger LOGGER = LoggerFactory.getLogger(MaPremiereClasseTest.class);
     @BeforeEach
     public void setUp(){
         System.setProperty("webdriver.chrome.driver",   "/tmp/chromedriver");
