@@ -47,7 +47,7 @@ public class MaPremiereClasseTest {
         LOGGER.info("Ouverture de la page google.fr");
         driver.get("http://www.google.fr");
         driver.manage().window().maximize();
-        driver.findElement(By.cssSelector("#input")).sendKeys("tsts");
+        driver.findElement(By.cssSelector("#voiceSearchButton")).click();
         LOGGER.info("Fin d'ouverture de google.fr");
     }
     @Test
