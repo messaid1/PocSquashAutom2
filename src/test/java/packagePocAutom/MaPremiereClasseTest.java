@@ -47,7 +47,7 @@ public class MaPremiereClasseTest {
         LOGGER.info("Ouverture de la page google.fr");
         driver.get("http://www.google.fr");
         driver.manage().window().maximize();
-        driver.findElement(By.xpath("/html/body/ntp-app//div/div[1]/ntp-realbox//div/input")).sendKeys("tsts");
+        driver.findElement(By.cssSelector("#input")).sendKeys("tsts");
         LOGGER.info("Fin d'ouverture de google.fr");
     }
     @Test
