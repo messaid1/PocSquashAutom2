@@ -21,8 +21,8 @@ public class MaPremiereClasseTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(MaPremiereClasseTest.class);
     @BeforeEach
     public void setUp(){
-        //System.setProperty("webdriver.chrome.driver",   "/tmp/chromedriver");
-        System.setProperty("webdriver.chrome.driver",   ".\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",   "/tmp/chromedriver");
+        //System.setProperty("webdriver.chrome.driver",   ".\\chromedriver.exe");
         Map<String, Object> prefs = new HashMap<>();
         // permet tous les cookies pour Chrome en deux etapes
         // 1 - allow all cookies
